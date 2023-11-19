@@ -220,4 +220,17 @@ VALUES
     (199, 220, 980.2),
     (200, 200, 910.1);
 
+-- Insert 150 entries into the PrivateJet table
+INSERT INTO PrivateJet (SNID, owner_name)
+SELECT SNID, CONCAT('Owner', SNID) AS owner_name
+FROM Airplane
+WHERE SNID BETWEEN 1 AND 150;
+
+-- Insert 50 entries into the CommercialPlane table
+INSERT INTO CommercialPlane (SNID, airline_name)
+SELECT SNID, CONCAT('Airline', SNID) AS airline_name
+FROM Airplane
+WHERE SNID BETWEEN 151 AND 200;
+
+
 
