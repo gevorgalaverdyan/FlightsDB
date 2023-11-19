@@ -1,17 +1,20 @@
-CREATE TABLE FlightTicketPerson(
-    PRIMARY KEY(seat_num, flight_id, p_id),
+CREATE TABLE FlightTicketPerson (
     seat_num INT NOT NULL,
-    price FLOAT,
+    flight_id INT,
+    p_id INT,
+    price REAL,
     class VARCHAR(50),
-    Foreign Key (flight_id) REFERENCES (Flight) ON DELETE CASCADE,
-    Foreign Key (p_id) REFERENCES (Person) ON DELETE CASCADE
+    PRIMARY KEY (seat_num, flight_id, p_id),
+    FOREIGN KEY (flight_id) REFERENCES Flight(flight_id) ON DELETE CASCADE,
+    FOREIGN KEY (p_id) REFERENCES Person(p_id) ON DELETE CASCADE
 );
+
 
 INSERT INTO FlightTicketPerson (seat_num, price, class, flight_id, p_id)
 VALUES
-    (1, 250.00, 'First Class', 1, 1),
-    (2, 200.00, 'Business Class', 2, 2),
-    (3, 150.00, 'Economy Class', 3, 3),
+    (1, NULL, NULL, 1, 1),
+    (2, NULL, NULL, 2, 2),
+    (3, NULL, NULL, 3, 3),
     (4, 260.00, 'First Class', 4, 4),
     (5, 210.00, 'Business Class', 5, 5),
     (6, 160.00, 'Economy Class', 6, 6),

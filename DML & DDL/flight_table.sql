@@ -2,14 +2,15 @@ CREATE TABLE Flight (
 	flight_id INT PRIMARY KEY NOT NULL,
 	departure_location VARCHAR(100) NOT NULL,
 	arrival_location VARCHAR(100) NOT NULL,
-	departure_time DATE NOT NULL,
-	arrival_time DATE NOT NULL,
+	departure_time timestamp NOT NULL,
+	arrival_time timestamp NOT NULL,
 	SNID INT,
 	FOREIGN KEY(SNID) REFERENCES Airplane(SNID) ON DELETE CASCADE
 );
 
 Insert into flight values
 (1, 'New York', 'Los Angeles', '2022-01-01 08:00:00', '2022-01-01 12:00:00', 1),
+(201, 'Montreal', 'Laval', '2022-01-01 08:00:00', '2022-01-01 12:00:00', 1),
 (2, 'Los Angeles', 'New York', '2022-01-02 10:00:00', '2022-01-02 14:00:00', 2),
 (3, 'Chicago', 'Miami', '2022-01-03 08:30:00', '2022-01-03 12:30:00', 3),
 (4, 'Miami', 'Chicago', '2022-01-04 10:30:00', '2022-01-04 14:30:00', 4),
@@ -164,7 +165,6 @@ Insert into flight values
 (153, 'Los Angeles', 'Chicago', '2022-08-26 05:30:00', '2022-08-26 09:30:00', 153),
 (154, 'Chicago', 'Los Angeles', '2022-08-26 07:30:00', '2022-08-26 11:30:00', 154),
 (155, 'San Francisco', 'Denver', '2022-08-27 05:45:00', '2022-08-27 09:45:00', 155),
-(156, 'Denver', 'San Francisco', '2022-08-27 07:45:00', '2022-08-27 11:45:00', 156),
 (156, 'Tehran', 'Shiraz', '2022-09-01 08:00:00', '2022-09-01 10:30:00', 156),
 (157, 'Shiraz', 'Tehran', '2022-09-02 10:30:00', '2022-09-02 13:00:00', 157),
 (158, 'Isfahan', 'Mashhad', '2022-09-03 12:00:00', '2022-09-03 15:30:00', 158),

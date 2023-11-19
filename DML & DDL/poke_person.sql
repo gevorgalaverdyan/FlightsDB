@@ -4,13 +4,12 @@ CREATE TABLE Person (
 );
 
 CREATE TABLE Pokemon (
-  poke_id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name varchar(79) NOT NULL,
-  pok_height int(11) DEFAULT NULL,
-  pok_weight int(11) DEFAULT NULL,
-  pok_base_experience int(11) DEFAULT NULL
+  poke_id INT PRIMARY KEY NOT NULL,
+  name VARCHAR(79) NOT NULL,
+  pok_height INT DEFAULT NULL,
+  pok_weight INT DEFAULT NULL,
+  pok_base_experience INT DEFAULT NULL
 );
-
 
 CREATE TABLE FavPokemon (
 	p_id INTEGER NOT NULL,  
