@@ -1,5 +1,5 @@
 CREATE TABLE Person (
-	  person_ID INTEGER PRIMARY KEY,
+	  p_id INTEGER PRIMARY KEY,
 	  person_name VARCHAR(50)
 	 
 );
