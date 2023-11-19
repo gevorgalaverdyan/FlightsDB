@@ -5,12 +5,12 @@ max_speed REAL NOT NULL
 )
 
 CREATE TABLE PrivateJet(
-owner_name CHAR(40),
+owner_name VARCHAR(40),
 FOREIGN KEY(SNID) REFERENCES(Airplane) ON DELETE CASCADE
 )
 
 
 CREATE TABLE CommercialPlane(
-airline_name CHAR(40),
+airline_name VARCHAR(40),
 FOREIGN KEY(SNID) REFERENCES(Airplane) ON DELETE CASCADE
 )
