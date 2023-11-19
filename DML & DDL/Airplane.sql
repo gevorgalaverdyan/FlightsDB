@@ -1,7 +1,7 @@
 CREATE TABLE Airplane(
 SNID INTEGER PRIMARY KEY NOT NULL,
-capacity INTEGER,
-max_speed REAL
+capacity INTEGER NOT NULL,
+max_speed REAL NOT NULL
 )
 
 CREATE TABLE PrivateJet(
