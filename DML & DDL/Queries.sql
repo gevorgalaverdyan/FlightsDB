@@ -124,3 +124,25 @@ WHERE NOT EXISTS (
 
 -- #9
 
+-- Covering Query
+SELECT
+    a.snid AS airplane_id,
+    p.snid AS private_jet_id,
+    c.snid AS commercial_plane_id
+FROM
+    airplane a
+LEFT JOIN
+    PrivateJet p ON a.snid = p.snid
+LEFT JOIN
+    CommercialPlane c ON a.snid = c.snid;
+
+
+-- Overlap Query
+SELECT *
+FROM
+    privatejet p
+INNER JOIN
+    commercialplane c ON p.snid = c.snid
+
+
+
