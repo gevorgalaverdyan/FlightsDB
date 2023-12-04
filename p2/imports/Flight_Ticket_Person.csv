@@ -195,6 +195,6 @@
 198,198,198,800,Economy Class
 199,199,199,910,First Class
 200,200,200,860,Business Class
-1,1,1,,
-2,2,2,,
-3,3,3,,
+1,1,1,100,First Class
+2,2,2,200,First Class
+3,3,3,300,First Class
