@@ -1,0 +1,13 @@
+//no index: 
+//#1 6ms 
+//#2 6ms
+//#3 6 to 10ms 
+//#4 5 to 8ms
+//#6 4 to 5ms
+
+//with inedex: 
+//#1 4ms 
+//#2 4 to 6ms 
+//#3 5 to 6ms
+//#4 4 to 7ms 
+//#6 4 to 5ms 
