@@ -1,3 +1,4 @@
+// Load data from airplane.csv
 LOAD CSV FROM 'file:///airplane.csv' AS line
 CREATE (:Airplane {
     SNID: line[0], 
@@ -8,12 +9,14 @@ CREATE (:Airplane {
     airline_name: null
 });
 
+// Load data from privatejet.csv
 LOAD CSV FROM 'file:///privatejet.csv' AS line
 MATCH (plane:Airplane {SNID: line[0]})
 SET plane.type = 'privatejet',
-SET plane.owner_name = line[1];
+    plane.owner_name = line[1];
 
+// Load data from commercialplane.csv
 LOAD CSV FROM 'file:///commercialplane.csv' AS line
 MATCH (plane:Airplane {SNID: line[0]})
 SET plane.type = 'commercialplane',
-SET plane.airline_name = line[1];
+    plane.airline_name = line[1];

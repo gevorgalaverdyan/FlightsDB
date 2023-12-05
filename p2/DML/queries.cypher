@@ -56,8 +56,3 @@ CALL db.index.fulltext.queryNodes("passenger_name", "Maxwell") YIELD node, score
 RETURN node.p_id, node.passenger_name, score
 ORDER BY score DESC;
 /////////////////////////////////////////////////
-
-//show index;
-//drop index index_10c09080;
-//drop index index_3ebd17d4;
-//drop index passenger_name
